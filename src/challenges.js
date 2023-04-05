@@ -20,6 +20,17 @@ function concatName(arrStr) {
 };
 
 // Desafio 4 - Crie a função footballPoints
+function footballPoints(wins, ties) {
+  let points = 0;
+  if (wins) {
+    points += (3 * wins);
+  }
+  if (ties) {
+    points += (1 * ties);
+  }
+  return points;
+  ;
+};
 
 // Desafio 5 - Crie a função highestCount
 
