@@ -10,9 +10,14 @@ function compareTrue(p1, p2) {
 // Desafio 2 - Crie a função splitSentence
 function splitSentence(phrase) {
   return phrase.split(' ');
-}
+};
 
 // Desafio 3 - Crie a função concatName
+function concatName(arrStr) {
+  for (let index = 0; index < arrStr.length; index += 1) {
+    return arrStr[(arrStr.length - 1)] + ', ' + arrStr[0];
+  };
+};
 
 // Desafio 4 - Crie a função footballPoints
 
