@@ -85,17 +85,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8 - Crie a função fizzBuzz
 function fizzBuzz(numbers) {
+  let arrNum = [];
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      return 'fizzBuzz';
+      arrNum.push('fizzBuzz');
     } else if (numbers[index] % 3 === 0) {
-      return 'fizz';
+      arrNum.push('fizz');
     } else if (numbers[index] % 5 === 0) {
-      return 'buzz';
+      arrNum.push('buzz');
     } else {
-      return 'bug!'
+      arrNum.push('bug!');
     };
   };
+  return arrNum;
 };
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
