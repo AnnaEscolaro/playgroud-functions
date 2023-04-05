@@ -71,6 +71,19 @@ function calcAllAreas(base, height, form) {
 };
 
 // Desafio 7 - Crie a função catAndMouse
+function catAndMouse(mouse, cat1, cat2) {
+  if ((cat1 - mouse) > (cat2 - mouse)) {
+    return 'cat2';
+  }
+  if ((cat1 - mouse) < (cat2 - mouse)) {
+    return 'cat1';
+  }
+  if ((cat1 - mouse) === (cat2 - mouse)) {
+    return 'os gatos trombam e o rato foge';
+  }
+};
+
+//ser number
 
 // Desafio 8 - Crie a função fizzBuzz
 
