@@ -100,9 +100,53 @@ function fizzBuzz(numbers) {
   return arrNum;
 };
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9 - Crie a função encode e a função decode
+function encode(phrase) {
+  phrase = phrase.split('');
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === 'a') {
+      phrase[index] = 1
+    }
+    if (phrase[index] === 'e') {
+      phrase[index] = 2
+    }
+    if (phrase[index] === 'i') {
+      phrase[index] = 3
+    }
+    if (phrase[index] === 'o') {
+      phrase[index] = 4
+    }
+    if (phrase[index] === 'u') {
+      phrase[index] = 5
+    }
+  }
+  phrase = phrase.join('');
+  return phrase;
+}
+
+function decode(phrase) {
+  phrase = phrase.split('');
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === 1) {
+      phrase[index] = 'a'
+    }
+    if (phrase[index] === 2) {
+      phrase[index] = 'e'
+    }
+    if (phrase[index] === 3) {
+      phrase[index] = 'i'
+    }
+    if (phrase[index] === 4) {
+      phrase[index] = 'o'
+    }
+    if (phrase[index] === 5) {
+      phrase[index] = 'u'
+    }
+  }
+  phrase = phrase.join('');
+  return phrase;
+}
+
 
 // Desafio 10 - Crie a função techList
 
