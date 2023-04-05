@@ -8,6 +8,9 @@ function compareTrue(p1, p2) {
 };
 
 // Desafio 2 - Crie a função splitSentence
+function splitSentence(phrase) {
+  return phrase.split(' ');
+}
 
 // Desafio 3 - Crie a função concatName
 
