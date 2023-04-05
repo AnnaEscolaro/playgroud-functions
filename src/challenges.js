@@ -105,19 +105,19 @@ function encode(phrase) {
   phrase = phrase.split('');
   for (let index = 0; index < phrase.length; index += 1) {
     if (phrase[index] === 'a') {
-      phrase[index] = 1
+      phrase[index] = '1'
     }
     if (phrase[index] === 'e') {
-      phrase[index] = 2
+      phrase[index] = '2'
     }
     if (phrase[index] === 'i') {
-      phrase[index] = 3
+      phrase[index] = '3'
     }
     if (phrase[index] === 'o') {
-      phrase[index] = 4
+      phrase[index] = '4'
     }
     if (phrase[index] === 'u') {
-      phrase[index] = 5
+      phrase[index] = '5'
     }
   }
   phrase = phrase.join('');
@@ -127,19 +127,19 @@ function encode(phrase) {
 function decode(phrase) {
   phrase = phrase.split('');
   for (let index = 0; index < phrase.length; index += 1) {
-    if (phrase[index] === 1) {
+    if (phrase[index] === '1') {
       phrase[index] = 'a'
     }
-    if (phrase[index] === 2) {
+    if (phrase[index] === '2') {
       phrase[index] = 'e'
     }
-    if (phrase[index] === 3) {
+    if (phrase[index] === '3') {
       phrase[index] = 'i'
     }
-    if (phrase[index] === 4) {
+    if (phrase[index] === '4') {
       phrase[index] = 'o'
     }
-    if (phrase[index] === 5) {
+    if (phrase[index] === '5') {
       phrase[index] = 'u'
     }
   }
@@ -147,8 +147,11 @@ function decode(phrase) {
   return phrase;
 }
 
-
 // Desafio 10 - Crie a função techList
+function techList(arrTech, arrName) {
+  array = [];
+
+}
 
 // Não modifique essas linhas
 module.exports = {
