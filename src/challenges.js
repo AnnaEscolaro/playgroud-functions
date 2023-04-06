@@ -153,9 +153,8 @@ function techList(arrTech, strName) {
   if (!arrTech) {
     return techArr;
   }
-
-  techArr = techArr.sort();
   for (let index in arrTech) {
+    arrTech.sort();
     techArr.push({
       tech: arrTech[index],
       name: strName,
@@ -163,8 +162,6 @@ function techList(arrTech, strName) {
   }
   return techArr;
 };
-
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Não modifique essas linhas
 module.exports = {
