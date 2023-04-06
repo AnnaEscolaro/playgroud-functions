@@ -154,6 +154,7 @@ function techList(arrTech, strName) {
     return techArr;
   }
 
+  techArr = techArr.sort();
   for (let index in arrTech) {
     techArr.push({
       tech: arrTech[index],
@@ -163,7 +164,7 @@ function techList(arrTech, strName) {
   return techArr;
 };
 
-console.log(techList([], 'Lucas'));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Não modifique essas linhas
 module.exports = {
