@@ -162,7 +162,6 @@ function techList(arrTech, strName) {
   }
   return techArr;
 };
-
 // Não modifique essas linhas
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => { }),
