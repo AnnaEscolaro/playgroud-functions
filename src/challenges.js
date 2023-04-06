@@ -148,10 +148,22 @@ function decode(phrase) {
 }
 
 // Desafio 10 - Crie a função techList
-function techList(arrTech, arrName) {
-  array = [];
+function techList(arrTech, strName) {
+  let techArr = [];
+  if (!arrTech) {
+    return techArr;
+  }
 
-}
+  for (let index in arrTech) {
+    techArr.push({
+      tech: arrTech[index],
+      name: strName,
+    });
+  }
+  return techArr;
+};
+
+console.log(techList([], 'Lucas'));
 
 // Não modifique essas linhas
 module.exports = {
