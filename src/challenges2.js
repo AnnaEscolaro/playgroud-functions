@@ -3,26 +3,27 @@ function generatePhoneNumber(arr11Num) {
   if (arr11Num.length !== 11) {
     return 'Array com tamanho incorreto.'
   };
-  for (let index of arr11Num) {
-    if (arr11Num[index] < 0 || arr11Num[index] > 9) {
+  for (let val of arr11Num) {
+    if (val < 0 || val > 9) {
       return 'não é possível gerar um número de telefone com esses valores'
-    };
+    }
     let counter = 0;
-    for (let idx of arr11Num) {
-      if (arr11Num[index] === arr11Num[idx]) {
+    for (let value of arr11Num) {
+      if (value === val) {
         counter += 1;
-      };
-    };
-    if (counter < 3) {
-      counter = 0;
-    } else if (counter >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    };
-  };
+      }
+      if (counter >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+  }
   return `(${arr11Num[0]}${arr11Num[1]}) ${arr11Num[2]}${arr11Num[3]}${arr11Num[4]}${arr11Num[5]}${arr11Num[6]}-${arr11Num[7]}${arr11Num[8]}${arr11Num[9]}${arr11Num[10]}`
 };
 
+console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
+
 // Desafio 12 -  Crie a função triangleCheck
+function triangleCheck(lineA, lineB, liceC) { }
 
 // Desafio 13 - Crie a função hydrate
 function hydrate(str) {
