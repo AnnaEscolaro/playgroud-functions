@@ -33,16 +33,27 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13 - Crie a função hydrate
 function hydrate(str) {
-  if (str === '1 cerveja') {
-    return '1 copo de água';
+  let drinks = str.match(/\d+/g);
+  let numOfDrinks = [];
+
+  drinks.forEach(str => {
+    numOfDrinks.push(parseInt(str));
+  })
+
+  let totalDrinks = 0;
+  for (let value of numOfDrinks) {
+    totalDrinks += value;
   }
-  if (str === '1 cachaça, 5 cervejas e 1 copo de vinho') {
-    return '7 copos de água';
+  if (totalDrinks === 0) {
+    return false;
   }
-  if (str === '1 cachaça, 5 cervejas e 1 copo de vinho') {
-    return '7 copos de água';
+  if (totalDrinks === 1) {
+    return `${totalDrinks} copo de água`
   }
-}
+  if (totalDrinks > 1) {
+    return `${totalDrinks} copos de água`;
+  }
+};
 
 /* eslint no-undef: 0 */
 
