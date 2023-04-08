@@ -5,7 +5,7 @@ function generatePhoneNumber(arr11Num) {
   };
   for (let val of arr11Num) {
     if (val < 0 || val > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     let counter = 0;
     for (let value of arr11Num) {
@@ -20,10 +20,16 @@ function generatePhoneNumber(arr11Num) {
   return `(${arr11Num[0]}${arr11Num[1]}) ${arr11Num[2]}${arr11Num[3]}${arr11Num[4]}${arr11Num[5]}${arr11Num[6]}-${arr11Num[7]}${arr11Num[8]}${arr11Num[9]}${arr11Num[10]}`
 };
 
-console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
-
 // Desafio 12 -  Crie a função triangleCheck
-function triangleCheck(lineA, lineB, liceC) { }
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  }
+  if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB)) {
+    return true;
+  }
+  return false;
+};
 
 // Desafio 13 - Crie a função hydrate
 function hydrate(str) {
